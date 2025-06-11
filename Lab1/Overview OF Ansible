@@ -1,0 +1,52 @@
+Lab1: Ansible
+Overview OF Ansible:
+Ansible is a very simple IT automation platform that makes your systems and applications easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management. It aims to provide large productivity gains to a wide variety of automation challenges.
+
+
+Ansible can also automate the configuration of a wide range of systems and devices such as databases, storage devices, networks, firewalls, and many others. It makes sure that all the necessary packages and all other software are consistent on the server to run the application. The best part is that you don’t even need to know the commands used to accomplish a particular task. You just need to specify what state you want the system to be in and Ansible will take care of it.
+It allows you to create groups of machines, describe how these machines should be configured or what actions should be taken on them. Ansible issues all commands from a central location to perform these tasks. It uses the playbook to describe automation jobs, and which uses a very simple language YAML.
+ Benefits of configuration management in DevOps.
+
+Configuration management plays a crucial role in the DevOps approach by providing numerous benefits that help streamline and enhance software development and deployment processes. Here are some key benefits of configuration management in DevOps:
+
+Consistency and Standardization: Consistency and Standardization: Configuration management ensures that the entire software environment, including servers, applications, and infrastructure, is configured consistently across development, testing, and production stages. This minimizes the risk of discrepancies or errors caused by inconsistent configurations.
+
+
+Automation: Automation is a core principle of DevOps. Configuration management tools automate the provisioning, deployment, and management of software components and infrastructure
+Version Control:Configuration management systems maintain version history for configurations, code, and infrastructure settings.
+
+Reproducibility:  With proper configuration management, it becomes possible to recreate any environment exactly as it was during development or testing. This is crucial for troubleshooting, testing, and reproducing issues in a controlled setting.
+
+Scalability:  Configuration management tools help manage the scaling of infrastructure and applications by providing templates and scripts for automatic scaling
+
+Faster Deployment: Automating configuration tasks leads to faster and more reliable deployments. Changes can be made consistently across environments, reducing the time needed for manual setup and decreasing the chances of errors.
+
+Collaboration: Configuration management tools facilitate collaboration among development, operations, and quality assurance teams.
+
+Security and Compliance: Configuration management helps enforce security best practices by ensuring consistent security configurations across environments
+
+
+Reduced Downtime: Since configurations are consistent and automated, the risk of deployment-related downtime is minimized.
+
+
+Infrastructure as Code (IaC): Configuration management often involves the concept of "Infrastructure as Code." This means that infrastructure components are defined in code, which can be versioned, reviewed, and tested like application code. It brings the benefits of agility, repeatability, and consistency to infrastructure provisioning.
+
+
+Continuous Monitoring and Auditing: Configuration management tools can provide continuous monitoring and auditing of infrastructure and application configurations.
+
+
+Cost Efficiency: By automating processes and optimizing resource allocation, configuration management contributes to cost savings by reducing manual effort, minimizing errors, and optimizing resource usage.
+
+ Installing Ansible on AWS EC2:
+
+
+Step1:
+ 
+ sudo apt-add-repository ppa:ansible/ansible 
+ sudo apt update    
+ sudo apt install ansible
+
+======================
+
+
+

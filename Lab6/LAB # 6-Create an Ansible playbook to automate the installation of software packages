@@ -1,0 +1,32 @@
+LAB#6-Create an Ansible playbook to automate the installation of software packages (nginx, git, python3) on servers within the localhost group 
+
+Prerequisites: 
+Create ec2 instance ,master n nodes
+Install ansible 
+Setup inventory file 
+Status of ansible
+Ping the node 
+
+
+---
+- name: Install software packages on servers
+  hosts: localhost
+  become: yes  # To escalate privileges if required
+
+  tasks:
+	- name: Update apt/yum cache (depending on the OS)
+  	ansible.builtin.package:
+    	name: "{{ item }}"
+    	state: present
+  	loop:
+    	- nginx
+    	- git
+    	- python3
+  	# You might need to adjust the package names based on the package manager of your OS (apt, yum, etc.)
+
+
+
+Ansible-playbook install_packages.yml
+
+Conclusion - Automation of Software Installation with Ansible Playbook
+The creation and execution of an Ansible playbook aimed at automating the installation of essential software packages (nginx, git, python3) on servers within the localhost group yielded valuable insights and achievements:

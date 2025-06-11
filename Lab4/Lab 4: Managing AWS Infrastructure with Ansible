@@ -1,0 +1,29 @@
+LAB#4 Set up a basic Ansible environment to manage local servers 
+Testing the connectivity 
+ Create a file on Tmp directory using Ansible playbook.
+PRErequisite:
+Create ec2 instance master and node
+Install Ansible
+Status of ansible
+Setup hostfile 
+Ping the nodes   
+
+STEP#1  Create Ansible Playbook
+
+
+---
+- name: Create file in /tmp directory
+  hosts: localhost
+  tasks:
+	- name: Create a file in /tmp directory
+  	ansible.builtin.file:
+    	path: /tmp/test_file.txt
+    	state: touch
+
+
+Run the playbook to create a file on the local servers
+
+ansible-playbook create_file.yml
+Conclusion: -
+ Setting Up Ansible Environment and File Creation Lab
+The setup and utilization of Ansible for managing local servers, testing connectivity, and creating a file on the /tmp directory using a playbook resulted in several key insights and accomplishments:

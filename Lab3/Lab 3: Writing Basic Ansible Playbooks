@@ -1,0 +1,39 @@
+Lab 3: Writing Basic Ansible Playbooks:
+
+
+
+1- Write a playbook to install Nginx
+2-Create a file named  nginx-install OR myfile.yaml
+
+
+  ---- 
+name: Install Nginx on Ubuntu
+  hosts: server
+  become: yes
+
+  tasks:
+	- name: Update APT package cache
+  	apt:
+    	update_cache: yes
+
+	- name: Install Nginx
+  	apt:
+    	name: nginx
+    	state: latest
+
+	- name: Start Nginx and enable it at boot
+  	service:
+    	name: nginx
+    	state: started
+    	enabled: yes
+
+
+
+-
+
+
+Run this playbook using the same ansible-playbook command:
+3- ansible-playbook myfile.yaml 
+
+
+—-----------------

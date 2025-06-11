@@ -1,0 +1,48 @@
+LAB5:  Create a role for setting up a database server and  Utilize an Ansible Galaxy role for web server setup.
+
+
+Certainly! In this scenario, we'll create an Ansible role for setting up a database server, and then we'll utilize an Ansible Galaxy role for setting up a web server. This assumes that you want to set up a database server and a web server on separate machines.
+
+TASK1:
+
+Create an Ansible Role for Database Server Playbook:
+---
+- name: Install Database Server
+  hosts: database_server
+  become: yes
+
+  vars:  # Define variables here
+	db_server_package: "mysql-server"  # Replace with the appropriate package name
+
+  tasks:
+	- name: Update package cache and install the database server package
+  	apt:
+    	name: "{{ db_server_package }}"
+    	state: latest
+
+
+Execute the playbook : 
+Ansible-playbook myplaybook.yml
+
+Step2: .Utilize an Ansible Galaxy Role for Web Server Setup:
+ansible-galaxy install geerlingguy.nginx
+
+5.Create an Ansible Playbook:
+
+---
+- name: Setup Nginx Web Server
+  hosts: web_server  # Replace with your target hosts or group
+  become: yes
+
+  roles:
+	- geerlingguy.nginx
+
+
+
+
+Execute the Ansible Playbook:
+
+ansible-playbook  your_playbook.yml
+
+
+======================
